@@ -1,0 +1,10 @@
+.warningMessage {
+    -fx-border-radius: 10px;
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-background-color: #ff00004b;
+    -fx-background-radius: 10px;
+    -fx-opacity: 0.0;
+    -fx-visible: false;
+    -fx-managed: false;
+}

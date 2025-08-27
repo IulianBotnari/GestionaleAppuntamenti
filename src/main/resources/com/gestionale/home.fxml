@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="817.0" prefWidth="1192.0" stylesheets="@styleHome.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionale.controllerHome">
+   <children>
+      <BorderPane prefHeight="867.0" prefWidth="1192.0">
+         <center>
+      
+            <ListView fx:id="appuntamentiListView" prefHeight="529.0" prefWidth="1164.0" styleClass="appuntamentiListView" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Pane prefHeight="137.0" prefWidth="1192.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="27.0" layoutY="95.0" prefHeight="17.0" text="Lista Appuntamenti">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+            
+                  
+                  
+                  <Button fx:id="vaiInserisciAppuntamento" layoutX="27.0" layoutY="38.0" mnemonicParsing="false" onAction="#vaiAInserisci" text="Inserisci Nuovo Appuntamento" />
+                  <Button layoutX="336.0" layoutY="38.0" mnemonicParsing="false" onAction="#creaReport" text="Crea report" />
+                  
+                  
+                  
+                  <DatePicker fx:id="filtraPerData" layoutX="326.0" layoutY="97.0" prefWidth="139.0" />
+                  <Label layoutX="241.0" layoutY="97.0" prefHeight="25.0" prefWidth="85.0" text="Seleziona data" />
+                  <Button fx:id="cercaPerData" layoutX="486.0" layoutY="97.0" mnemonicParsing="false" onAction="#getAppuntamentiByDate" text="Cerca" />
+                  <Button layoutX="220.0" layoutY="38.0" mnemonicParsing="false" onAction="#inserisciAcquisto" text="Inserisci acquisto" />
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="133.0" prefWidth="1192.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="infoMessage" layoutX="327.0" layoutY="26.0" prefHeight="71.0" prefWidth="538.0" />
+                  <StackPane fx:id="warningMessage" layoutX="337.0" layoutY="36.0" prefHeight="71.0" prefWidth="538.0" />
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane> -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="1920.0" prefWidth="1080.0" stylesheets="@styleHome.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionale.controllerHome">
+    <center>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <ListView fx:id="appuntamentiListView" prefHeight="500.0" prefWidth="1080.0" styleClass="appuntamentiListView" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </center>
+    <top>
+        <VBox alignment="TOP_LEFT" spacing="10" BorderPane.alignment="TOP_LEFT">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <HBox alignment="TOP_LEFT" spacing="20">
+                    <children>
+                        <Button fx:id="vaiInserisciAppuntamento" mnemonicParsing="false" onAction="#vaiAInserisci" text="Inserisci Nuovo Appuntamento" />
+                        <Button layoutX="336.0" layoutY="38.0" mnemonicParsing="false" onAction="#creaReport" text="Crea report" />
+                        <Button layoutX="220.0" layoutY="38.0" mnemonicParsing="false" onAction="#inserisciAcquisto" text="Inserisci acquisto" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <children>
+                        <Label text="Lista Appuntamenti">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <Label text="Seleziona data" />
+                        <DatePicker fx:id="filtraPerData" prefWidth="139.0" />
+                        <Button fx:id="cercaPerData" mnemonicParsing="false" onAction="#getAppuntamentiByDate" text="Cerca" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+      <VBox prefWidth="500" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="infoMessage" layoutX="268.0" layoutY="13.0" prefHeight="64.0" prefWidth="496.0" styleClass="infoMessage" />
+            <StackPane fx:id="warningMessage" layoutX="268.0" layoutY="13.0" prefHeight="64.0" prefWidth="496.0" styleClass="warningMessage" />
+         </children>
+      </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,27 @@
+
+.list-cell:filled:selected {
+    -fx-background-color: rgb(215, 219, 219); 
+    -fx-text-fill: rgb(7, 7, 7); 
+}
+
+.warningMessage {
+    -fx-border-radius: 10px;
+    -fx-border-color: red;
+    -fx-border-width: 1px;
+    -fx-background-color: #ff00004b;
+    -fx-background-radius: 10px;
+    -fx-opacity: 0.0;
+    -fx-visible: false;
+    -fx-managed: false;
+}
+
+.infoMessage {
+    -fx-border-radius: 10px;
+    -fx-border-color: rgb(81, 202, 0);
+    -fx-border-width: 1px;
+    -fx-background-color: #00ff154b;
+    -fx-background-radius: 10px;
+    -fx-opacity: 0.0;
+    -fx-visible: false;
+    -fx-managed: false;
+}
